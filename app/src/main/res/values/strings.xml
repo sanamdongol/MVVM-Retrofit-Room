@@ -2,4 +2,13 @@
     <string name="app_name">MvvmRetro</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="nrb_desc">Nepal Rastra Bank (NRB), the Central Bank of Nepal, was established in 1956 under the Nepal Rastra Bank Act, 1955, to discharge the central banking responsibilities including guiding the development of the embryonic domestic financial sector. Since establishment, there has been significant growth in both the number and the activities of the domestic financial institutions in the country.
+
+To reflect this dynamic environment, the functions and objectives of the Bank have been re-casted by the new Nepal Rastra Bank Act, 2058 (2002), which lays down the objectives of the Bank as:
+
+To formulate necessary monetary and foreign exchange policies in order to maintain the stability of price and balance of payment for economic stability and sustainable development of economy, and manage it;
+To increase the access of the financial service and increase the public confidence towards the banking and financial system by maintaining stability of the banking and financial sectors,
+To develop a secure, healthy and efficient system of payment;
+For the achievement of the above objectives in the present dynamic environment, NRB is pursuing sustained progress and continued reform of the financial sector is of utmost importance. In this regard, NRB is pursuing various policies, strategies and actions, all of which are conveyed in the Banks annual monetary policy.
+</string>
 </resources>

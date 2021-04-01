@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".notification.NotificationActivity">
+
+    <Button
+        android:id="@+id/btn_notify_a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="24dp"
+        android:text="Notify A"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_notify_b"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Notify B"
+        app:layout_constraintEnd_toEndOf="@+id/btn_notify_a"
+        app:layout_constraintStart_toStartOf="@+id/btn_notify_a"
+        app:layout_constraintTop_toBottomOf="@+id/btn_notify_a" />
+
+    <Button
+        android:id="@+id/btn_notify_c"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Notify C"
+        app:layout_constraintEnd_toEndOf="@+id/btn_notify_b"
+        app:layout_constraintStart_toStartOf="@+id/btn_notify_b"
+        app:layout_constraintTop_toBottomOf="@+id/btn_notify_b" />
+
+    <Button
+        android:id="@+id/btn_notify_d"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Notify D"
+        app:layout_constraintEnd_toEndOf="@+id/btn_notify_c"
+        app:layout_constraintStart_toStartOf="@+id/btn_notify_c"
+        app:layout_constraintTop_toBottomOf="@+id/btn_notify_c" />
+</androidx.constraintlayout.widget.ConstraintLayout>
