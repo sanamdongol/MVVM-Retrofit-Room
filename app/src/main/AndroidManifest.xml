@@ -13,17 +13,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MvvmRetro">
-        <activity android:name=".notification.NotificationActivity">
+        <activity android:name=".recyclerview.normarecyclerview.RegularRecyclerViewActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".dialogs.DialogsActivity">
+        <activity android:name=".recyclerview.ChatActivity">
 
         </activity>
+        <activity android:name=".alarmmanager.DetailActivity" />
+        <activity android:name=".alarmmanager.DailyNotifyActivity"></activity>
+        <activity android:name=".notification.NotificationActivity" />
+        <activity android:name=".dialogs.DialogsActivity" />
         <activity android:name=".pagination.PaginationActivity" />
         <activity android:name=".ui.activities.MainActivity" />
+
+        <receiver android:name=".alarmmanager.NotificationReceiver" />
     </application>
 
 </manifest>
