@@ -6,6 +6,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.test.mvvmretro.R;
@@ -14,9 +15,11 @@ import java.util.List;
 
 public class ChatAdapter extends RecyclerView.Adapter {
     private List<Chat> msgList;
+    private OnItemClickListener listener;
 
-    public ChatAdapter(List<Chat> msgList) {
+    public ChatAdapter(List<Chat> msgList, OnItemClickListener listener) {
         this.msgList = msgList;
+        this.listener = listener;
     }
 
     @Override
@@ -48,10 +51,20 @@ public class ChatAdapter extends RecyclerView.Adapter {
         if (getItemViewType(position) == 1) {
             MsgSentVH svh = (MsgSentVH) holder;
             svh.tvSentMsg.setText(data.getMsg());
+            //setClick(holder, position);
         } else {
             MsgReceiveVH rvh = (MsgReceiveVH) holder;
             rvh.tvReceiveMsg.setText(data.getMsg());
         }
+    }
+
+    private void setClick(MsgReceiveVH holder, int position) {
+        holder.rootLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
     }
 
     @Override
@@ -61,10 +74,12 @@ public class ChatAdapter extends RecyclerView.Adapter {
 
     static class MsgReceiveVH extends RecyclerView.ViewHolder {
         TextView tvReceiveMsg;
+        ConstraintLayout rootLayout;
 
         public MsgReceiveVH(@NonNull View itemView) {
             super(itemView);
             tvReceiveMsg = itemView.findViewById(R.id.tv_received_msg);
+            rootLayout = itemView.findViewById(R.id.rootLayout);
         }
     }
 
@@ -75,5 +90,9 @@ public class ChatAdapter extends RecyclerView.Adapter {
             super(itemView);
             tvSentMsg = itemView.findViewById(R.id.tv_msg_sent);
         }
+    }
+
+    interface OnItemClickListener {
+        void onItemClick();
     }
 }

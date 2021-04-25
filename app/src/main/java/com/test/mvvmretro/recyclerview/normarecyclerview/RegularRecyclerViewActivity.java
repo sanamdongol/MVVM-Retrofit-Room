@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import com.test.mvvmretro.R;
 
@@ -21,7 +22,18 @@ public class RegularRecyclerViewActivity extends AppCompatActivity {
 
         List<MyRegularData> data = fetchData();
 
+
         RegularAdapter adapter = new RegularAdapter(data);
+       /* LinearLayoutManager manager = new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(manager);
+       */
+
+       /* GridLayoutManager manager = new GridLayoutManager(this,2);
+        recyclerView.setLayoutManager(manager);*/
+
+        StaggeredGridLayoutManager manager = new StaggeredGridLayoutManager(2,
+                StaggeredGridLayoutManager.HORIZONTAL);
+        recyclerView.setLayoutManager(manager);
         recyclerView.setAdapter(adapter);
     }
 

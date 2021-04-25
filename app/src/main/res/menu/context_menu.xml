@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_one"
+        android:icon="@android:drawable/ic_delete"
+        android:title="Menu 1" />
+    <item
+        android:id="@+id/menu_two"
+        android:icon="@android:drawable/ic_menu_edit"
+        android:title="Menu 2" />
+    <item
+        android:id="@+id/menu_three"
+        android:icon="@android:drawable/star_big_on"
+        android:title="Menu 3" />
+    <item
+        android:id="@+id/menu_four"
+        android:icon="@android:drawable/btn_minus"
+        android:title="Menu 4" />
+    <item
+        android:id="@+id/menu_five"
+        android:icon="@android:drawable/edit_text"
+        android:title="Menu 5" />
+    <item
+        android:id="@+id/menu_six"
+        android:icon="@android:drawable/ic_menu_search"
+        android:title="Menu 6" />
+</menu>
