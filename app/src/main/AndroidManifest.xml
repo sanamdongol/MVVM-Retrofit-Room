@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <application
         android:name=".App"
@@ -14,16 +15,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MvvmRetro">
         <activity android:name=".fcm.FcmActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".lottieanimation.LottieActivity">
 
         </activity>
-        <activity android:name=".SnackActivity"></activity>
+        <activity android:name=".lottieanimation.LottieActivity"></activity>
+        <activity android:name=".snackbar.SnackActivity" />
         <activity android:name=".chips.ChipsActivity" />
         <activity android:name=".deeplink.DeepLinkActivity">
             <intent-filter>
@@ -60,6 +55,14 @@
         <activity android:name=".dialogs.DialogsActivity" />
         <activity android:name=".pagination.PaginationActivity" />
         <activity android:name=".ui.activities.MainActivity" />
+        <activity android:name=".pdfdownload.PdfActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".pdfdownload.WebActivity" />
 
         <receiver android:name=".alarmmanager.NotificationReceiver" />
 
@@ -70,18 +73,20 @@
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
-
-        <!-- Set custom default icon. This is used when no icon is set for incoming notification messages.
-     See README(https://goo.gl/l4GJaQ) for more. -->
+        <!--
+ Set custom default icon. This is used when no icon is set for incoming notification messages.
+     See README(https://goo.gl/l4GJaQ) for more.
+        -->
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_icon"
             android:resource="@mipmap/ic_launcher" />
-        <!-- Set color used with incoming notification messages. This is used when no color is set for the incoming
-             notification message. See README(https://goo.gl/6BKBk7) for more. -->
+        <!--
+ Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more.
+        -->
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_color"
             android:resource="@color/purple_200" />
-
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_channel_id"
             android:value="1" />

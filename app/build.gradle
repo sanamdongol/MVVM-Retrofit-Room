@@ -59,4 +59,12 @@ dependencies {
     implementation platform('com.google.firebase:firebase-bom:27.1.0')
     implementation 'com.google.firebase:firebase-messaging'
 
+    implementation 'com.github.barteksc:android-pdf-viewer:2.8.2'
+
+    //url plus
+    implementation 'es.voghdev.pdfviewpager:library:1.1.2'
+
+    implementation 'com.karumi:dexter:6.2.2'
+    implementation 'com.github.barteksc:android-pdf-viewer:2.8.2'
+
 }
